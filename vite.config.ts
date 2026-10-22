@@ -1,8 +1,7 @@
 import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react-swc'; // SWC, без Babel
+import react from '@vitejs/plugin-react-swc';
 
-// В GitHub Actions VITE_BASE = /<имя-репозитория>/
 export default defineConfig({
   plugins: [react()],
-  base: process.env.VITE_BASE ?? '/',
+  base: './',
 });
